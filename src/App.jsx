@@ -12,7 +12,7 @@ export default function App() {
       <main className="space-y-0">
         <Hero />
         <About />
-        <Showcase />
+        {/* <Showcase /> */}
         <Contact />
       </main>
       <Footer />

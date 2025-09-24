@@ -26,17 +26,11 @@ export default function Contact() {
                 Tell us about your idea, production timeline, or collaboration goals. We respond within two business days.
               </p>
             </div>
-            <div className="flex gap-4 text-sm uppercase tracking-[0.2em] text-slate-300">
-              <a href="https://twitter.com" className="transition hover:text-white">
-                Twitter
-              </a>
-              <a href="https://discord.com" className="transition hover:text-white">
-                Discord
-              </a>
+            {/* <div className="flex gap-4 text-sm uppercase tracking-[0.2em] text-slate-300">
               <a href="mailto:hello@qamgames.com" className="transition hover:text-white">
                 Email
               </a>
-            </div>
+            </div> */}
           </div>
 
           <form onSubmit={handleSubmit} className="grid gap-6 lg:grid-cols-2">

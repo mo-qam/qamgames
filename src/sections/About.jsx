@@ -19,12 +19,10 @@ export default function About() {
         >
           <h2 className="section-title">About qamgames</h2>
           <p className="section-subtitle">
-            qamgames is a design-led studio building emotionally resonant game worlds. We are relentless about combining bold
-            aesthetics, tight gameplay loops, and technology that pushes the medium forward.
+            qamgames is a game studio specializing in rapid prototyping, design consultation, and retention & engagement optimization. We help teams quickly validate ideas, refine gameplay, and maximize player value.
           </p>
           <p className="mt-6 text-base text-slate-300">
-            Our collective is comprised of directors, engineers, and composers who thrive on collaboration. We believe that
-            unforgettable play emerges when art, storytelling, and systems thinking blend seamlessly.
+            Our expertise spans fast iteration, systems design, and player psychology. We collaborate with studios and creators to deliver prototypes, actionable feedback, and strategies for long-term player engagement.
           </p>
         </motion.div>
 
@@ -39,14 +37,13 @@ export default function About() {
           <div className="relative z-10 space-y-8">
             <h3 className="text-lg font-semibold text-white">Vision</h3>
             <p className="text-sm text-slate-300">
-              We channel cinematic flair, systems design, and community insight into rich, replayable experiences. Each project is
-              carefully prototyped with rapid iteration, refined with player feedback, and shipped with a focus on longevity.
+              We believe in rapid iteration, actionable design, and data-driven retention. Every project is prototyped for speed, refined for engagement, and delivered with a focus on sustainable player growth and satisfaction.
             </p>
             <div className="grid gap-6 sm:grid-cols-3">
               {stats.map((stat) => (
-                <div key={stat.label} className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center">
+                <div key={stat.label} className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center flex flex-col items-center">
                   <p className="text-3xl font-display font-semibold text-white">{stat.value}</p>
-                  <p className="mt-2 text-xs uppercase tracking-[0.2em] text-slate-400">{stat.label}</p>
+                  <p className="mt-2 text-xs text-slate-400 whitespace-normal w-full text-center">{stat.label}</p>
                 </div>
               ))}
             </div>

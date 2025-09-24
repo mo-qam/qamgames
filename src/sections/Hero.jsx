@@ -38,16 +38,15 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs uppercase tracking-[0.35em] text-slate-200"
         >
-          Indie Game Development Studio
+          Rapid Prototyping & Game Design Studio
         </motion.div>
-
         <motion.h1
           variants={heroText}
           initial="hidden"
           animate="visible"
           className="max-w-3xl text-4xl font-display font-semibold leading-tight text-white sm:text-6xl"
         >
-          Crafting <span className="gradient-text">striking worlds</span> and immersive play for bold audiences.
+          A game studio specializing in <span className="gradient-text">rapid prototyping</span>, design consultation, and retention & engagement optimization.
         </motion.h1>
 
         <motion.p
@@ -57,8 +56,7 @@ export default function Hero() {
           transition={{ delay: 0.2, duration: 0.8 }}
           className="max-w-2xl text-lg text-slate-300"
         >
-          qamgames blends cinematic direction with technical precision to deliver unforgettable indie experiences across PC,
-          console, and emerging platforms.
+          qamgames partners with studios and creators to accelerate development, optimize player retention, and enhance engagement through expert prototyping and design systems.
         </motion.p>
 
         <motion.div

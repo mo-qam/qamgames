@@ -1,9 +1,10 @@
 import { useState } from 'react';
+import logo from '../assets/qamgames_logo.png';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
   { label: 'About', href: '#about' },
-  { label: 'Showcase', href: '#showcase' },
+  // { label: 'Showcase', href: '#showcase' },
   { label: 'Contact', href: '#contact' }
 ];
 
@@ -28,7 +29,8 @@ export default function Header() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#hero" className="flex items-center gap-2 text-lg font-display uppercase tracking-[0.35em]">
-          <span className="inline-block h-3 w-3 rounded-full bg-crimson shadow-glow" />
+          <img src={logo} alt="qamgames logo" className="h-8 w-auto " />
+          {/* <span className="inline-block h-3 w-3 rounded-full bg-crimson shadow-glow" /> */}
           qamgames
         </a>
 
