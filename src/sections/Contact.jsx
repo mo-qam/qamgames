@@ -1,12 +1,41 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
+
 export default function Contact() {
+  const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (event) => {
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+    try {
+      const response = await fetch('https://formspree.io/f/xwkzqgqg', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.message,
+        }),
+      });
+      if (response.ok) {
+        setSubmitted(true);
+        setForm({ name: '', email: '', message: '' });
+      } else {
+        setError('Failed to send. Please try again.');
+      }
+    } catch (err) {
+      setError('Network error. Please try again.');
+    }
+    setLoading(false);
   };
 
   return (
@@ -43,7 +72,10 @@ export default function Contact() {
                 type="text"
                 required
                 placeholder="Your name"
+                value={form.name}
+                onChange={handleChange}
                 className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none transition focus:border-crimson/60 focus:ring-2 focus:ring-crimson/30"
+                disabled={loading}
               />
             </div>
             <div className="space-y-2">
@@ -55,7 +87,10 @@ export default function Contact() {
                 type="email"
                 required
                 placeholder="you@studio.com"
+                value={form.email}
+                onChange={handleChange}
                 className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none transition focus:border-crimson/60 focus:ring-2 focus:ring-crimson/30"
+                disabled={loading}
               />
             </div>
             <div className="lg:col-span-2">
@@ -68,7 +103,10 @@ export default function Contact() {
                   rows="5"
                   required
                   placeholder="Share what you want to create, timelines, or anything we should know."
+                  value={form.message}
+                  onChange={handleChange}
                   className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none transition focus:border-crimson/60 focus:ring-2 focus:ring-crimson/30"
+                  disabled={loading}
                 />
               </div>
             </div>
@@ -76,15 +114,21 @@ export default function Contact() {
               <button
                 type="submit"
                 className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-crimson to-ember px-8 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-white shadow-glow transition-all duration-300 hover:-translate-y-1"
+                disabled={loading}
               >
-                Send Message
+                {loading ? 'Sending...' : 'Send Message'}
                 <span className="inline-flex h-2 w-8 overflow-hidden rounded-full bg-white/20">
                   <span className="block h-full w-full origin-left scale-x-0 bg-white transition-transform duration-300 group-hover:scale-x-100" />
                 </span>
               </button>
               {submitted && (
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400">
-                  Message ready! We&apos;ll get back shortly.
+                  Message sent! We&apos;ll get back shortly.
+                </span>
+              )}
+              {error && (
+                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-crimson-400">
+                  {error}
                 </span>
               )}
             </div>
