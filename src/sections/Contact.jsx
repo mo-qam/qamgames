@@ -50,9 +50,9 @@ export default function Contact() {
         >
           <div className="mb-10 flex flex-col items-start justify-between gap-6 text-left sm:flex-row sm:items-center">
             <div>
-              <h2 className="section-title">Let&apos;s build your next experience</h2>
+              <h2 className="section-title">Work with qamgames</h2>
               <p className="section-subtitle">
-                Tell us about your idea, production timeline, or collaboration goals. We respond within two business days.
+                Work with us or play with us—let's create something amazing together. Tell us about your idea or just say hi.
               </p>
             </div>
             {/* <div className="flex gap-4 text-sm uppercase tracking-[0.2em] text-slate-300">
@@ -96,8 +96,8 @@ export default function Contact() {
             <div className="lg:col-span-2">
               <div className="space-y-2">
                 <label htmlFor="message" className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
-                  Project Vision
-                </label>
+                    Message
+                  </label>
                 <textarea
                   id="message"
                   rows="5"

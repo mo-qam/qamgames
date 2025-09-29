@@ -38,15 +38,16 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs uppercase tracking-[0.35em] text-slate-200"
         >
-          Rapid Prototyping & Game Design Studio
+          Independent game studio — original games & partner builds
         </motion.div>
+
         <motion.h1
           variants={heroText}
           initial="hidden"
           animate="visible"
           className="max-w-3xl text-4xl font-display font-semibold leading-tight text-white sm:text-6xl"
         >
-          A game studio specializing in <span className="gradient-text">rapid prototyping</span>, design consultation, and retention & engagement optimization.
+          <span className="gradient-text">Playful Worlds</span> crafted for players — built with partners.
         </motion.h1>
 
         <motion.p
@@ -56,7 +57,7 @@ export default function Hero() {
           transition={{ delay: 0.2, duration: 0.8 }}
           className="max-w-2xl text-lg text-slate-300"
         >
-          qamgames partners with studios and creators to accelerate development, optimize player retention, and enhance engagement through expert prototyping and design systems.
+          We design and ship polished web & mobile games, and partner with studios to deliver production-ready projects.
         </motion.p>
 
         <motion.div
@@ -66,19 +67,16 @@ export default function Hero() {
           className="flex flex-col items-center gap-4 sm:flex-row"
         >
           <a
-            href="#showcase"
-            className="group inline-flex items-center gap-2 rounded-full bg-crimson px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-glow transition-transform duration-300 hover:-translate-y-1 hover:bg-gradient-to-r hover:from-crimson hover:to-ember"
+            href="#services"
+            className="group inline-flex items-center gap-2 rounded-full bg-crimson px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-glow transition-transform duration-300 hover:-translate-y-1"
           >
-            View Showcase
-            <span className="h-2 w-8 overflow-hidden rounded-full bg-white/20">
-              <span className="block h-full w-full origin-left scale-x-0 bg-white transition-transform duration-300 group-hover:scale-x-100" />
-            </span>
+            Our Services
           </a>
           <a
             href="#contact"
             className="inline-flex items-center gap-2 rounded-full border border-white/10 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-slate-200 transition-all duration-300 hover:border-crimson/60 hover:text-white"
           >
-            Collaborate with us
+            Work With Us
           </a>
         </motion.div>
       </div>

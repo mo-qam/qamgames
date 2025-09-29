@@ -16,7 +16,7 @@ const cardVariants = {
 
 export default function Showcase() {
   return (
-    <section id="showcase" className="section-padding bg-carbon/60">
+  <section id="games" className="section-padding bg-carbon/60">
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col gap-5 text-center sm:text-left">
           <motion.span
@@ -60,16 +60,23 @@ export default function Showcase() {
               viewport={{ once: true, amount: 0.3 }}
               className="group relative flex flex-col overflow-hidden rounded-3xl border border-white/5 bg-gradient-to-br from-white/5 via-white/0 to-white/5 p-6 shadow-card transition duration-500 hover:-translate-y-2 hover:shadow-glow"
             >
-              <div className="relative h-40 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-crimson/30 via-night to-ember/30">
-                <div className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                  <div className="absolute -right-20 top-1/2 h-40 w-40 -translate-y-1/2 rounded-full bg-ember/40 blur-3xl" />
-                  <div className="absolute -left-16 top-10 h-32 w-32 rounded-full bg-crimson/50 blur-3xl" />
+                <div className="relative h-44 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-crimson/30 via-night to-ember/30">
+                  {/* Placeholder for cover image */}
+                  <div className="absolute inset-0 flex items-center justify-center text-slate-500">
+                    <div className="mx-auto w-32 text-center">
+                      <div className="mb-2 h-20 w-full rounded-lg bg-white/5" />
+                      <div className="text-xs">Cover image</div>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                    <div className="absolute -right-20 top-1/2 h-40 w-40 -translate-y-1/2 rounded-full bg-ember/40 blur-3xl" />
+                    <div className="absolute -left-16 top-10 h-32 w-32 rounded-full bg-crimson/50 blur-3xl" />
+                  </div>
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.18),transparent_50%)]" aria-hidden="true" />
+                  <span className="absolute left-5 top-5 rounded-full border border-white/10 bg-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.3em] text-white/80">
+                    {project.status}
+                  </span>
                 </div>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.18),transparent_50%)]" aria-hidden="true" />
-                <span className="absolute left-5 top-5 rounded-full border border-white/10 bg-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.3em] text-white/80">
-                  {project.status}
-                </span>
-              </div>
 
               <div className="mt-6 flex flex-1 flex-col">
                 <h3 className="text-xl font-semibold text-white">{project.title}</h3>
@@ -84,10 +91,9 @@ export default function Showcase() {
                 <div className="mt-auto pt-6">
                   <a
                     href={project.link}
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-crimson transition hover:text-white"
+                    className="inline-flex items-center gap-2 rounded-full border border-crimson/30 px-4 py-2 text-sm font-semibold text-crimson transition hover:bg-crimson/10"
                   >
-                    View Project
-                    <span aria-hidden="true" className="text-base">→</span>
+                    Play / View
                   </a>
                 </div>
               </div>

@@ -17,12 +17,12 @@ export default function About() {
           transition={{ duration: 0.7 }}
           viewport={{ once: true, amount: 0.4 }}
         >
-          <h2 className="section-title">About qamgames</h2>
+          <h2 className="section-title">About QamGames</h2>
           <p className="section-subtitle">
-            qamgames is a game studio specializing in rapid prototyping, design consultation, and retention & engagement optimization. We help teams quickly validate ideas, refine gameplay, and maximize player value.
+            qamgames is an independent game studio passionate about making fun, engaging web and mobile games. We balance creative internal projects with professional client work.
           </p>
           <p className="mt-6 text-base text-slate-300">
-            Our expertise spans fast iteration, systems design, and player psychology. We collaborate with studios and creators to deliver prototypes, actionable feedback, and strategies for long-term player engagement.
+            We design and build original titles from concept to release, and partner with studios and clients to deliver polished production outcomes. Our approach is professional, approachable, and focused on player-first design.
           </p>
         </motion.div>
 

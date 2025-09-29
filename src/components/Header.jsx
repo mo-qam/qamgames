@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
   { label: 'About', href: '#about' },
-  // { label: 'Showcase', href: '#showcase' },
+  { label: 'Services', href: '#services' },
   { label: 'Contact', href: '#contact' }
 ];
 
@@ -49,7 +49,7 @@ export default function Header() {
             href="#contact"
             className="rounded-full border border-crimson/60 px-4 py-2 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-crimson hover:bg-crimson/80 hover:shadow-glow"
           >
-            Start a Project
+            Work With Us
           </a>
         </nav>
 
